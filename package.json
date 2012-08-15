@@ -1,0 +1,15 @@
+{
+  "author": "Ben Sheldon <gstagas@gmail.com> (http://stagas.com)",
+  "name": "mapudp",
+  "description": "a udp connector for maptail, a realtime map view of GeoIP data",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "express": "~2.5.8",
+    "maptail": "~0.1.10",
+    "colors": "*"
+  }
+}
