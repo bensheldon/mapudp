@@ -5,10 +5,10 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "0.6.x"
+    "node": "0.8.x"
   },
   "dependencies": {
-    "express": "~2.5.8",
+    "express": "2.x",
     "maptail": "~0.1.10",
     "colors": "*"
   }
