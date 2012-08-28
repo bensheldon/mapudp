@@ -4,7 +4,8 @@
  */
 
 var udpServer = require("dgram").createSocket("udp4"),
-    UDP_PORT  = process.env.UDP_PORT || 3001;
+    UDP_PORT  = process.env.UDP_PORT || 3001,
+    UDP_ADDRESS = process.env.UDP_ADDRESS || "localhost";
 
 
 function rand256 () {
@@ -35,12 +36,12 @@ var n = 0;
       setTimeout(function () {
 
         /** Send the UDP datagram **/
-        var message = {
+        var msg = {
           ip: ip,
           info: "whatever you want!" 
         };
-        var msg = new Buffer(JSON.stringify(message));    
-        udpServer.send(msg, 0, msg.length, UDP_PORT, "localhost");
+        var msgBuf = new Buffer(JSON.stringify(msg));    
+        udpServer.send(msgBuf, 0, msgBuf.length, UDP_PORT, UDP_ADDRESS);
         /** Done! **/
 
       }, Math.floor(Math.random() * 500))

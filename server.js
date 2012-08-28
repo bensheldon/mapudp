@@ -1,8 +1,8 @@
 var express   = require('express'),
-    udpServer = require("dgram").createSocket("udp4"),
+    udpServer = exports.udp = require("dgram").createSocket("udp4"),
     colors    = require('colors'),
     maptail   = require('maptail'),
-    app       = module.exports = express.createServer(),
+    app       = exports.app = express.createServer(),
     PORT      = process.env.PORT || 3000,
     UDP_PORT  = process.env.UDP_PORT || 3001;
 
